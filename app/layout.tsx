@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
+import ThemeToggle from "@/components/theme-toggle";
 
 const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
@@ -31,7 +32,10 @@ export default function RootLayout({
             <SidebarProvider>
               <AppSidebar />
               <main className="p-4 w-full">
-                <SidebarTrigger />
+                <div className="flex">
+                  <SidebarTrigger />
+                  <ThemeToggle />
+                </div>
                 {children}
               </main>
             </SidebarProvider>

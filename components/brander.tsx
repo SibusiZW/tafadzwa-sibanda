@@ -18,7 +18,6 @@ export function Brander({
     logo: React.ReactNode
   }
 }) {
-  const { isMobile } = useSidebar()
   const [activeBrand, setActiveBrand] = React.useState(brand)
 
   if (!activeBrand) {
@@ -33,7 +32,7 @@ export function Brander({
             size="lg"
             className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
           >
-            <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
+            <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-green-500 text-sidebar-primary-foreground">
               {activeBrand.logo}
             </div>
             <div className="grid flex-1 text-left text-sm leading-tight">

@@ -31,7 +31,7 @@ export default function Intro() {
             <div className="flex space-x-4 mt-6">
                 <Button className="bg-blue-500" variant={'link'}>
                     <Briefcase />
-                    <Link href={'#'}>Download my CV</Link>
+                    <Link target="_blank" href={'/docs/tafadzwa_sibanda_resume.pdf'}>Download my CV</Link>
                 </Button>
 
                 <Button className="bg-green-500" variant={'link'}>

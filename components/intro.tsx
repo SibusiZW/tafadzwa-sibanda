@@ -1,0 +1,44 @@
+import Image from "next/image";
+import { Button } from "./ui/button";
+import { Briefcase } from "lucide-react";
+import Link from "next/link";
+import { FaGithub } from "react-icons/fa";
+
+export default function Intro() {
+    return (
+        <div className="flex flex-col p-8">
+            <Image 
+                src={'/tafadzwa.png'}
+                alt="tafadzwa sibanda"
+                width={200}
+                height={200}
+                className="rounded-md mb-4"
+            />
+
+            <h1 className="font-serif text-3xl mb-6">Tafadzwa <span className="text-green-500">Sibanda</span></h1>
+
+            <p>
+                Hi I'm Tafadzwa 👋, <br /> <br />
+
+                I'm a skilled software developer from Kwekwe, Zimbabwe who specialises in building scalable, reliable and flexible full-stack web apps. <br />
+                I like building projects in public to hear out people's enquiries to improve my products. <br />
+                I'm a supporter of the project-based learning framework which I use myself. <br /> <br />
+
+                Are you ready to build your next big product? <br />
+                If <span className="text-green-500">yes</span>? Let's get in touch 🤗!
+            </p>
+
+            <div className="flex space-x-4 mt-6">
+                <Button className="bg-blue-500" variant={'link'}>
+                    <Briefcase />
+                    <Link href={'#'}>Download my CV</Link>
+                </Button>
+
+                <Button className="bg-green-500" variant={'link'}>
+                    <FaGithub />
+                    <Link target="_blank" href={'https://github.com/SibusiZW/'}>View my GitHub</Link>
+                </Button>
+            </div>
+        </div>
+    )
+}

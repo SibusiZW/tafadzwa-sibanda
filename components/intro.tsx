@@ -15,7 +15,7 @@ export default function Intro() {
                 className="rounded-md mb-4"
             />
 
-            <h1 className="font-serif text-3xl mb-6">Tafadzwa <span className="text-green-500">Sibanda</span></h1>
+            <h1 className="font-serif text-3xl mb-6">Who is <span className="text-gray-500">Tafadzwa Sibanda</span>?</h1>
 
             <p>
                 Hi I'm Tafadzwa 👋, <br /> <br />

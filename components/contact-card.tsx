@@ -41,7 +41,7 @@ export default function ContactCard() {
 
                 <Button className="bg-indigo-600 w-full hover:bg-indigo-300" variant={'link'}>
                     <FaGithub />
-                    <Link target="_blank" href={'https://github.com/SibusiZW/'}>Get in touch on LinkedIn</Link>
+                    <Link target="_blank" href={'https://github.com/SibusiZW/'}>Get in touch on gitHub</Link>
                 </Button>
             </div>
         </div>

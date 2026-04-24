@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Button } from "./ui/button";
-import { Briefcase } from "lucide-react";
+import { Briefcase, Phone } from "lucide-react";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 
@@ -28,7 +28,7 @@ export default function Intro() {
                 If <span className="text-green-500">yes</span>? Let's get in touch 🤗!
             </p>
 
-            <div className="flex space-x-4 mt-6">
+            <div className="flex flex-col w-full max-w-[200px] space-y-4 mt-6">
                 <Button className="bg-blue-500" variant={'link'}>
                     <Briefcase />
                     <Link target="_blank" href={'/docs/tafadzwa_sibanda_resume.pdf'}>Download my CV</Link>
@@ -36,7 +36,12 @@ export default function Intro() {
 
                 <Button className="bg-green-500" variant={'link'}>
                     <FaGithub />
-                    <Link target="_blank" href={'https://github.com/SibusiZW/'}>View my GitHub</Link>
+                    <Link target="_blank" href={'https://github.com/SibusiZW/'}>View My Work on GitHub</Link>
+                </Button>
+
+                <Button className="bg-orange-500" variant={'link'}>
+                    <Phone />
+                    <Link href={'/contact'}>Let's connect</Link>
                 </Button>
             </div>
         </div>

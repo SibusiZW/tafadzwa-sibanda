@@ -20,7 +20,7 @@ export default function ContactCard() {
             </form>
 
             <div className="text-center space-y-4">
-                <p className="text-gray-500">--------------------or--------------------</p>
+                <p className="text-gray-500">or</p>
 
                 <p className="mb-2">Call +263 78 829 2400</p>
 

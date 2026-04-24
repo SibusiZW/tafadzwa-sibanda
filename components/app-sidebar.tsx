@@ -37,47 +37,21 @@ const data = {
       items: [
         {
           title: "About me",
-          url: "#",
+          url: "/",
         },
         {
           title: "Skills",
-          url: "#",
+          url: "/skills",
         },
         {
           title: "Projects",
-          url: "#",
+          url: "/projects",
         },
         {
           title: "Get In Touch",
-          url: "#"
+          url: "/contact"
         }
       ],
-    },
-  ],
-  projects: [
-    {
-      name: "Design Engineering",
-      url: "#",
-      icon: (
-        <FrameIcon
-        />
-      ),
-    },
-    {
-      name: "Sales & Marketing",
-      url: "#",
-      icon: (
-        <PieChartIcon
-        />
-      ),
-    },
-    {
-      name: "Travel",
-      url: "#",
-      icon: (
-        <MapIcon
-        />
-      ),
     },
   ],
 }

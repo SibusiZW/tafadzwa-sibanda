@@ -47,7 +47,7 @@ export default function ContactCard() {
 
                 <Button className="bg-green-500 w-full hover:bg-green-300" variant={'link'}>
                     <MessageCircle />
-                    <Link target="_blank" href={'https://wa.me/263788292400'}>Get in touch on WhatsApp</Link>
+                    <Link target="_blank" href={'https://wa.me/263788292400?text=Hi%20Tafadzwa!'}>Get in touch on WhatsApp</Link>
                 </Button>
 
                 <Button className="bg-red-600 w-full hover:bg-red-300" variant={'link'}>

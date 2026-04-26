@@ -1,21 +1,42 @@
-import { MessageCircle, Send } from "lucide-react";
+'use client';
+
+import { Loader2, MessageCircle, Send } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import Link from "next/link";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import React, { useState } from "react";
+import { toast } from "sonner";
+import { createMessage } from "@/server/messages";
 
 export default function ContactCard() {
+
+    const [contact, setContact] = useState("");
+    const [message, setMessage] = useState("");
+    const [loading, setLoading] = useState(false);
+
+    async function handleSubmit(e: React.SubmitEvent) {
+        e.preventDefault();
+
+        setLoading(true);
+        await createMessage(contact, message);
+        setLoading(false);
+
+        toast.success("Message sent succesfully!");
+        setMessage("");
+        setContact("");
+    }
+
     return (
         <div className="p-4 space-y-4 w-full max-w-[450px]">
             <h1 className="font-serif text-3xl">Contact <span className="text-orange-500">me</span></h1>
             
-            <form action="">
-                <Input className="w-full mb-2" placeholder="Enter your contact details here, e.g phone number or email" required/>
-                <Textarea placeholder="Enter your message here" className="mb-2" required/>
-                <Button className="w-full mb-3">
-                    <Send />
-                    Send message
+            <form onSubmit={handleSubmit}>
+                <Input value={contact} className="w-full mb-2" placeholder="Enter your contact details here, e.g phone number or email" onChange={(e) => setContact(e.target.value)} required/>
+                <Textarea value={message} placeholder="Enter your message here" className="mb-2" onChange={(e) => setMessage(e.target.value)} required/>
+                <Button type={'submit'} className="w-full mb-3">
+                    {loading ? <Loader2 className="animate-spin"/> : <><Send /> Send message</>}
                 </Button>
             </form>
 

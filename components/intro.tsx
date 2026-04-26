@@ -15,7 +15,7 @@ export default function Intro() {
                 className="rounded-md mb-4"
             />
 
-            <h1 className="font-serif text-3xl mb-6">Who is <span className="text-green-500">Tafadzwa Sibanda</span>?</h1>
+            <h1 className="font-serif text-3xl mb-6">Who is <span className="text-orange-500">Tafadzwa Sibanda</span>?</h1>
 
             <p>
                 Hi I'm Tafadzwa 👋, <br /> <br />
@@ -25,21 +25,21 @@ export default function Intro() {
                 I'm a supporter of the project-based learning framework which I use myself. <br /> <br />
 
                 Are you ready to build your next big product? <br />
-                If <span className="text-green-500">yes</span>? Let's get in touch 🤗!
+                If <span className="text-orange-500">yes</span>? Let's get in touch 🤗!
             </p>
 
             <div className="flex flex-col w-full max-w-[200px] space-y-4 mt-6">
-                <Button className="bg-blue-500" variant={'link'}>
+                <Button className="bg-orange-300" variant={'link'}>
                     <Briefcase />
                     <Link target="_blank" href={'/docs/tafadzwa_sibanda_resume.pdf'}>Download my CV</Link>
                 </Button>
 
-                <Button className="bg-green-500" variant={'link'}>
+                <Button className="bg-orange-500" variant={'link'}>
                     <FaGithub />
                     <Link target="_blank" href={'https://github.com/SibusiZW/'}>View My Work on GitHub</Link>
                 </Button>
 
-                <Button className="bg-orange-500" variant={'link'}>
+                <Button className="bg-orange-600" variant={'link'}>
                     <Phone />
                     <Link href={'/contact'}>Let's connect</Link>
                 </Button>

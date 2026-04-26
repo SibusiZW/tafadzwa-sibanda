@@ -9,6 +9,7 @@ import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import React, { useState } from "react";
 import { toast } from "sonner";
 import { createMessage } from "@/server/messages";
+import { playfair } from "@/lib/fonts";
 
 export default function ContactCard() {
 
@@ -30,7 +31,7 @@ export default function ContactCard() {
 
     return (
         <div className="p-4 space-y-4 w-full max-w-[450px]">
-            <h1 className="font-serif text-3xl">Contact <span className="text-orange-500">me</span></h1>
+            <h1 className={`text-3xl ${playfair.className} antialiased`}>Contact <span className="text-orange-500">me</span></h1>
             
             <form onSubmit={handleSubmit}>
                 <Input value={contact} className="w-full mb-2" placeholder="Enter your contact details here, e.g phone number or email" onChange={(e) => setContact(e.target.value)} required/>

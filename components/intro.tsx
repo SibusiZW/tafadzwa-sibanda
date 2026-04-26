@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import { Briefcase, Phone } from "lucide-react";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
+import { playfair } from "@/lib/fonts";
 
 export default function Intro() {
     return (
@@ -15,7 +16,7 @@ export default function Intro() {
                 className="rounded-md mb-4"
             />
 
-            <h1 className="font-serif text-3xl mb-6">Who is <span className="text-orange-500">Tafadzwa Sibanda</span>?</h1>
+            <h1 className={`text-3xl mb-6 ${playfair.className} antialiased`}>Who is <span className="text-orange-500">Tafadzwa Sibanda</span>?</h1>
 
             <p>
                 Hi I'm Tafadzwa 👋, <br /> <br />

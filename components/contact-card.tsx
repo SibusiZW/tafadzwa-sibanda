@@ -8,7 +8,7 @@ import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 export default function ContactCard() {
     return (
         <div className="p-4 space-y-4 w-full max-w-[450px]">
-            <h1 className="font-serif text-3xl">Contact me</h1>
+            <h1 className="font-serif text-3xl">Contact <span className="text-orange-500">me</span></h1>
             
             <form action="">
                 <Input className="w-full mb-2" placeholder="Enter your contact details here, e.g phone number or email" required/>
@@ -39,7 +39,7 @@ export default function ContactCard() {
                     <Link target="_blank" href={'https://www.linkedin.com/in/tafadzwa-sibanda-6a1a2a369/'}>Get in touch on LinkedIn</Link>
                 </Button>
 
-                <Button className="bg-indigo-600 w-full hover:bg-indigo-300" variant={'link'}>
+                <Button className="bg-gray-600 w-full hover:bg-gray-300" variant={'link'}>
                     <FaGithub />
                     <Link target="_blank" href={'https://github.com/SibusiZW/'}>Get in touch on GitHub</Link>
                 </Button>

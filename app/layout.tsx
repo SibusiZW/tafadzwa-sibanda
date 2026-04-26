@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
 import ThemeToggle from "@/components/theme-toggle";
+import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
@@ -40,6 +41,7 @@ export default function RootLayout({
               </main>
             </SidebarProvider>
           </ThemeProvider>
+          <Toaster />
         </body>
       </html>
     </>

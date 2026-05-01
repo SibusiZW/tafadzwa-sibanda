@@ -13,6 +13,7 @@ import { playfair } from "@/lib/fonts";
 
 export default function ContactCard() {
 
+    const [name, setName] = useState("");
     const [contact, setContact] = useState("");
     const [message, setMessage] = useState("");
     const [loading, setLoading] = useState(false);
@@ -21,7 +22,7 @@ export default function ContactCard() {
         e.preventDefault();
 
         setLoading(true);
-        await createMessage(contact, message);
+        await createMessage(contact, message, name);
         setLoading(false);
 
         toast.success("Message sent succesfully!");
@@ -34,6 +35,7 @@ export default function ContactCard() {
             <h1 className={`text-3xl ${playfair.className} antialiased`}>Contact <span className="text-orange-500">me</span></h1>
             
             <form onSubmit={handleSubmit}>
+                <Input value={name} className="w-full mb-2" placeholder="Enter your full name" onChange={(e) => setName(e.target.value)} required/>
                 <Input value={contact} className="w-full mb-2" placeholder="Enter your contact details here, e.g phone number or email" onChange={(e) => setContact(e.target.value)} required/>
                 <Textarea value={message} placeholder="Enter your message here" className="mb-2" onChange={(e) => setMessage(e.target.value)} required/>
                 <Button type={'submit'} className="w-full mb-3">
